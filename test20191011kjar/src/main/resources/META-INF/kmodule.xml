@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kmodule xmlns="http://www.drools.org/xsd/kmodule">
-  <!-- This is a minimal kmodule.xml. Ref Drools documentation, see http://docs.jboss.org/drools/release/6.1.0.Final/drools-docs/html_single/index.html#d0e1112 -->
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="defaultKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" sequential="true">
+    <ksession name="defaultStatelessKieSession" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="defaultStatefulKieSession" type="stateful" default="false" clockType="realtime"/>
+  </kbase>
 </kmodule>
